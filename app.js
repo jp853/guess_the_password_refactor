@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-  var wordCount = 10;
+  const wordCount = 10;
   var guessCount = 4;
   var password = '';
 
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   function toggleClasses(element) {
-    for (var i = 1; i < arguments.length; i++) {
+    for (let i = 1; i < arguments.length; i++) {
       element.classList.toggle(arguments[i]);
     }
   }
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   function shuffle(array) {
     var arrayCopy = array.slice();
-    for (var idx1 = arrayCopy.length - 1; idx1 > 0; idx1--) {
+    for (let idx1 = arrayCopy.length - 1; idx1 > 0; idx1--) {
       // generate a random index between 0 and idx1 (inclusive)
       var idx2 = Math.floor(Math.random() * (idx1 + 1));
 
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
   function compareWords(word1, word2) {
     if (word1.length !== word2.length) throw "Words must have the same length";
     var count = 0;
-    for (var i = 0; i < word1.length; i++) {
+    for (let i = 0; i < word1.length; i++) {
       if (word1[i] === word2[i]) count++;
     }
     return count;
